@@ -1,0 +1,9 @@
+.DS_Store
+.env
+*.log
+/vendor/
+/bin/
+/tmp/
+.idea/
+*.swp
+air.toml
