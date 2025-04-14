@@ -17,7 +17,7 @@ ps:
 	docker-compose ps
 
 dev:
-	kill -9 $(lsof -t -i :8090) && air -c air.toml
+	air -c air.toml
 
 up-dev:
 	docker-compose down -v

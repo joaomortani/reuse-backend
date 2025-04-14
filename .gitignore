@@ -7,3 +7,5 @@
 .idea/
 *.swp
 air.toml
+
+.vscode/settings.json
