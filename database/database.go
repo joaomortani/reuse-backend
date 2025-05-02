@@ -4,6 +4,8 @@ import (
 	"reuse-api/config"
 	models "reuse-api/models/user"
 
+	items "reuse-api/models/items"
+
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -18,4 +20,5 @@ func Connect() {
 	}
 	DB = database
 	DB.AutoMigrate(&models.User{})
+	DB.AutoMigrate(&items.Item{})
 }

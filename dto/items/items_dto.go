@@ -1,6 +1,10 @@
 package items
 
-import "time"
+import (
+	"time"
+
+	userdto "reuse-api/dto/user"
+)
 
 type ItemRequest struct {
 	Title       string   `json:"title" binding:"required"`
@@ -24,4 +28,10 @@ type ItemResponse struct {
 	CreatedAt   time.Time `json:"created_at"`
 	UpdatedAt   time.Time `json:"updated_at"`
 	OwnerName   string    `json:"owner_name"`
+	OwnerID     uint      `json:"owner_id"`
+}
+
+type ItemResponseWithUser struct {
+	Item ItemResponse         `json:"item"`
+	User userdto.UserResponse `json:"user"`
 }
